@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # meanTestApp
 
 ## Demo
@@ -77,3 +78,9 @@ yo mean-seed
 - Built using Mean-Seed: https://github.com/jackrabbitsgroup/generator-mean-seed
 	- see here for more details - technology used, dependencies, limitations/compatibility, code standards, directory/file structure, workflow, etc.
 - *MongoDB, Express.js, AngularJS, Node.js + Yeoman (Grunt, Bower, Yo) + Jasmine, Karma, Protractor*
+=======
+meanTestApp
+===========
+
+A test app on MEAN using mean-seed generator
+>>>>>>> c917096e4a0f040724c76a84ae001311b2927db8
