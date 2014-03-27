@@ -1,0 +1,613 @@
+{
+	"dirs": [
+		{
+			"name": "buildTempCss",
+			"path": "build",
+			"comment": "Need this at top since the order of css matters and want the base.css file FIRST. Also, NEED this file in the same directory as 'main.css' for relative file paths - i.e. to font-awesome font so it works with EITHER base.css or main.css..",
+			"files": {
+				"css": [
+					"base.css"
+				]
+			}
+		},
+		{
+			"name": "bower",
+			"path": "bower_components",
+			"dirs": [
+				{
+					"name": "minified",
+					"path": "",
+					"comment": "directory paths are part of file lists/names",
+					"files": {
+						"js": [
+							"angular/angular.min.js",
+							"angular-route/angular-route.min.js",
+							"angular-sanitize/angular-sanitize.min.js",
+							"angular-touch/angular-touch.min.js",
+							"angular-animate/angular-animate.min.js",
+							"angular-cookies/angular-cookies.min.js",
+							"momentjs/min/moment.min.js",
+							"hammerjs/dist/hammer.min.js",
+							"angular-array/array.min.js",
+							"angular-string/string.min.js",
+							"angular-facebook-auth/facebook-auth.min.js",
+							"angular-google-auth/google-auth.min.js"
+						]
+					},
+					"dirs": [
+						{
+							"name": "bourbon",
+							"files": {
+								"scss": [
+									"app/assets/stylesheets/_bourbon.scss"
+								]
+							}
+						},
+						{
+							"name": "less-flexbox",
+							"files": {
+								"css": [
+									"flexbox.min.css"
+								]
+							}
+						},
+						{
+							"name": "font-awesome",
+							"files": {
+								"scss": [
+									"scss/font-awesome.scss"
+								]
+							}
+						},
+						{
+							"name": "angular-forminput",
+							"files": {
+								"js": [
+									"forminput.min.js"
+								],
+								"css": [
+									"forminput.min.css"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "nonMinified",
+					"path": "",
+					"comment": "directory paths are part of file lists/names",
+					"files": {
+						"js": [
+							"angular-hammer/angular-hammer.js",
+							"angular-socket-io/socket.js"
+						],
+						"testUnit": [
+							"angular-socket-io/mock/socket-io.js"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "lib",
+			"dirs": [
+				{
+					"name": "minified",
+					"path": "",
+					"comment": "directory paths are part of file lists/names. Also, 'facebook/facebook.all.js' is HUGE (170kb minified!) and is currently included for Facebook login but if you are NOT going to use that, make sure to REMOVE this file! In general it may be better to try to shift to just backend facebook calls since this seems like a waste just for login... Similarly (though it is not as large) with google - remove if you are not using it!",
+					"files": {
+						"js": [
+							"angular-ui-bootstrap/ui-bootstrap-custom-tpls-0.4.0.min.js",
+							"facebook/facebook.all.min.js",
+							"google/gapi-plusone.min.js"
+						]
+					}
+				},
+				{
+					"name": "nonMinified",
+					"path": "",
+					"comment": "directory paths are part of file lists/names",
+					"files": {
+						"js": [
+							"lawnchair/lawnchair-edit.js"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "commonScss",
+			"path": "common/scss",
+			"comment": "Separated this from 'common' for ordering purposes",
+			"files": {
+				"scss": [
+					"_reset.scss",
+					"_fonts.scss",
+					"_typography.scss",
+					"_bootstrap-parts.scss",
+					"_body-other.scss",
+					"_form.scss",
+					"_buttons.scss",
+					"_layout.scss",
+					"_margin-padding.scss",
+					"_layout-animate.scss",
+					"_list.scss",
+					"_pop-up.scss"
+				]
+			}
+		},
+		{
+			"name": "common",
+			"path": "common",
+			"dirs": [
+				{
+					"name": "js",
+					"path": "js",
+					"files": {
+						"js": [
+							"app.js"
+						],
+						"testUnit": [
+							"app.spec.js"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "modules",
+			"dirs": [
+				{
+					"name": "services",
+					"dirs": [
+						{
+							"name": "models",
+							"dirs": [
+								{
+									"name": "user",
+									"files": {
+										"js": [
+											"UserModel.js"
+										],
+										"testUnit": [
+											"UserModel.spec.js"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "config",
+							"files": {
+								"js": [
+									"config.js"
+								],
+								"testUnit": [
+									"config.spec.js"
+								]
+							}
+						},
+						{
+							"name": "http",
+							"files": {
+								"js": [
+									"http.js"
+								],
+								"testUnit": [
+									"http.spec.js"
+								]
+							}
+						},
+						{
+							"name": "auth",
+							"files": {
+								"js": [
+									"auth.js"
+								],
+								"testUnit": [
+									"auth.spec.js"
+								]
+							}
+						},
+						{
+							"name": "storage",
+							"files": {
+								"js": [
+									"storage.js"
+								],
+								"testUnit": [
+									"storage.spec.js"
+								]
+							}
+						},
+						{
+							"name": "nav",
+							"files": {
+								"js": [
+									"nav-config.js",
+									"nav.js"
+								],
+								"scss": [
+									"_nav.scss"
+								],
+								"testUnit": [
+									"nav.spec.js"
+								]
+							},
+							"dirs": [
+								{
+									"name": "header-centered",
+									"files": {
+										"html": [
+											"header-centered.html"
+										],
+										"scss": [
+											"_header-centered.scss"
+										]
+									}
+								},
+								{
+									"name": "footer-flex",
+									"files": {
+										"html": [
+											"footer-flex.html"
+										],
+										"scss": [
+											"_footer-flex.scss"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "socialAuth",
+							"files": {
+								"js": [
+									"socialAuth.js"
+								],
+								"testUnit": [
+									"socialAuth.spec.js"
+								]
+							}
+						},
+						{
+							"name": "socket",
+							"files": {
+								"js": [
+									"socket.js"
+								],
+								"testUnit": [
+									"socket.spec.js"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "directives",
+					"dirs": [
+						{
+							"name": "appalert",
+							"files": {
+								"js": [
+									"appalert.js"
+								],
+								"scss": [
+									"_appalert.scss"
+								],
+								"testUnit": [
+									"appalert.spec.js"
+								]
+							}
+						},
+						{
+							"name": "login",
+							"files": {
+								"js": [
+									"login.js"
+								],
+								"scss": [
+									"_login.scss"
+								],
+								"testUnit": [
+									"login.spec.js"
+								]
+							}
+						},
+						{
+							"name": "signup",
+							"files": {
+								"js": [
+									"signup.js"
+								],
+								"scss": [
+									"_signup.scss"
+								],
+								"testUnit": [
+									"signup.spec.js"
+								]
+							}
+						},
+						{
+							"name": "socialAuthBtn",
+							"files": {
+								"js": [
+									"socialAuthBtn.js"
+								],
+								"scss": [
+									"_social-auth-btn.scss"
+								],
+								"testUnit": [
+									"socialAuthBtn.spec.js"
+								]
+							}
+						},
+						{
+							"name": "layout",
+							"files": {
+								"js": [
+									"layout.js"
+								],
+								"scss": [
+									"_layout.scss"
+								],
+								"testUnit": [
+									"layout.spec.js"
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "pages",
+					"dirs": [
+						{
+							"name": "layout",
+							"files": {
+								"js": [
+									"LayoutCtrl.js"
+								],
+								"testUnit": [
+									"LayoutCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "header",
+							"files": {
+								"js": [
+									"HeaderCtrl.js"
+								],
+								"html": [
+									"header.html"
+								],
+								"scss": [
+									"_header.scss"
+								],
+								"testUnit": [
+									"HeaderCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "footer",
+							"files": {
+								"js": [
+									"FooterCtrl.js"
+								],
+								"html": [
+									"footer.html"
+								],
+								"scss": [
+									"_footer.scss"
+								],
+								"testUnit": [
+									"FooterCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "home",
+							"files": {
+								"js": [
+									"HomeCtrl.js"
+								],
+								"html": [
+									"home.html"
+								],
+								"testUnit": [
+									"HomeCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "login",
+							"files": {
+								"js": [
+									"LoginCtrl.js"
+								],
+								"html": [
+									"login.html"
+								],
+								"scss": [
+									"_login.scss"
+								],
+								"testUnit": [
+									"LoginCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "signup",
+							"files": {
+								"js": [
+									"SignupCtrl.js"
+								],
+								"html": [
+									"signup.html"
+								],
+								"scss": [
+									"_signup.scss"
+								],
+								"testUnit": [
+									"SignupCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "passwordReset",
+							"files": {
+								"js": [
+									"PasswordResetCtrl.js"
+								],
+								"html": [
+									"password-reset.html"
+								],
+								"scss": [
+									"_password-reset.scss"
+								],
+								"testUnit": [
+									"PasswordResetCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "logout",
+							"files": {
+								"js": [
+									"LogoutCtrl.js"
+								],
+								"html": [
+									"logout.html"
+								],
+								"testUnit": [
+									"LogoutCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "userDelete",
+							"files": {
+								"js": [
+									"UserDeleteCtrl.js"
+								],
+								"html": [
+									"user-delete.html"
+								],
+								"testUnit": [
+									"UserDeleteCtrl.spec.js"
+								]
+							}
+						},
+						{
+							"name": "callback",
+							"dirs": [
+								{
+									"name": "twitter-auth-callback",
+									"files": {
+										"js": [
+											"TwitterAuthCallbackCtrl.js"
+										],
+										"html": [
+											"twitter-auth-callback.html"
+										],
+										"scss": [
+											"_twitter-auth-callback.scss"
+										],
+										"testUnit": [
+											"TwitterAuthCallbackCtrl.spec.js"
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "dev-test",
+							"dirs": [
+								{
+									"name": "test",
+									"files": {
+										"js": [
+											"TestCtrl.js"
+										],
+										"html": [
+											"test.html"
+										],
+										"testUnit": [
+											"TestCtrl.spec.js"
+										]
+									}
+								},
+								{
+									"name": "design",
+									"files": {
+										"js": [
+											"DesignCtrl.js"
+										],
+										"html": [
+											"design.html"
+										],
+										"scss": [
+											"_design.scss"
+										],
+										"testUnit": [
+											"DesignCtrl.spec.js"
+										]
+									}
+								},
+								{
+									"name": "socketio",
+									"files": {
+										"html": [
+											"socketio.html"
+										],
+										"js": [
+											"SocketioCtrl.js"
+										],
+										"testUnit": [
+											"SocketioCtrl.spec.js"
+										],
+										"scss": [
+											"_socketio.scss"
+										]
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "build",
+			"path": "build",
+			"files": {
+				"css": [
+					"main.css"
+				]
+			}
+		},
+		{
+			"name": "buildTemp",
+			"path": "build/temp",
+			"files": {
+				"js": [
+					"custom.min.js"
+				]
+			}
+		},
+		{
+			"name": "test",
+			"dirs": [
+				{
+					"name": "e2e",
+					"files": {
+						"testE2E": [
+							"**/*.scenarios.js"
+						]
+					}
+				}
+			]
+		}
+	]
+}

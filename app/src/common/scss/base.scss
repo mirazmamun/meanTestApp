@@ -1,0 +1,41 @@
+//variable definitions
+$font-dir: '../common/font/';		//hardcoded - NOTE: this is relative to the compiled css file, NOT this file
+
+//mixins
+@import 'mixins/_text.scss';
+@import 'mixins/_triangle.scss';
+
+//variables
+@import 'variables/_colors.scss';
+@import 'variables/_dir-paths.scss';
+
+@import '../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss';
+@import '../../bower_components/font-awesome/scss/font-awesome.scss';
+@import '../../common/scss/_reset.scss';
+@import '../../common/scss/_fonts.scss';
+@import '../../common/scss/_typography.scss';
+@import '../../common/scss/_bootstrap-parts.scss';
+@import '../../common/scss/_body-other.scss';
+@import '../../common/scss/_form.scss';
+@import '../../common/scss/_buttons.scss';
+@import '../../common/scss/_layout.scss';
+@import '../../common/scss/_margin-padding.scss';
+@import '../../common/scss/_layout-animate.scss';
+@import '../../common/scss/_list.scss';
+@import '../../common/scss/_pop-up.scss';
+@import '../../modules/services/nav/_nav.scss';
+@import '../../modules/services/nav/header-centered/_header-centered.scss';
+@import '../../modules/services/nav/footer-flex/_footer-flex.scss';
+@import '../../modules/directives/appalert/_appalert.scss';
+@import '../../modules/directives/login/_login.scss';
+@import '../../modules/directives/signup/_signup.scss';
+@import '../../modules/directives/socialAuthBtn/_social-auth-btn.scss';
+@import '../../modules/directives/layout/_layout.scss';
+@import '../../modules/pages/header/_header.scss';
+@import '../../modules/pages/footer/_footer.scss';
+@import '../../modules/pages/login/_login.scss';
+@import '../../modules/pages/signup/_signup.scss';
+@import '../../modules/pages/passwordReset/_password-reset.scss';
+@import '../../modules/pages/callback/twitter-auth-callback/_twitter-auth-callback.scss';
+@import '../../modules/pages/dev-test/design/_design.scss';
+@import '../../modules/pages/dev-test/socketio/_socketio.scss';
